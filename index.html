@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal do Círculo de Soluções</title>
+<style>
+:root{--bg:#0f1413;--card:#17201e;--card2:#1f2b28;--green:#39e58c;--text:#f4f7f5;--muted:#b7c3be;--line:#2f3d39;--yellow:#f6c85f;--blue:#7dc9ff;--red:#ff7b7b;--purple:#c9a7ff}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{padding:56px 8%;background:radial-gradient(circle at top right,#24483a,transparent 35%),linear-gradient(135deg,#0f1413,#16211e);border-bottom:1px solid var(--line)}
+header h1{margin:0;font-size:clamp(34px,6vw,72px);line-height:1;color:var(--green);letter-spacing:-2px}
+header p{max-width:900px;font-size:20px;color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;display:flex;gap:10px;overflow-x:auto;padding:14px 8%;background:rgba(15,20,19,.96);border-bottom:1px solid var(--line)}
+nav a{color:var(--text);text-decoration:none;white-space:nowrap;padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px}
+nav a:hover{border-color:var(--green);color:var(--green)}
+main{padding:36px 8% 80px}
+section{margin-bottom:64px}
+h2{color:var(--green);font-size:32px;margin-bottom:16px}
+h3{margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.card strong{color:var(--green)}
+.tag{display:inline-block;padding:4px 10px;background:rgba(57,229,140,.12);color:var(--green);border:1px solid rgba(57,229,140,.4);border-radius:999px;font-size:12px;font-weight:bold}
+.blue{color:var(--blue);border-color:rgba(125,201,255,.4);background:rgba(125,201,255,.12)}
+.yellow{color:var(--yellow);border-color:rgba(246,200,95,.4);background:rgba(246,200,95,.12)}
+.red{color:var(--red);border-color:rgba(255,123,123,.4);background:rgba(255,123,123,.12)}
+.purple{color:var(--purple);border-color:rgba(201,167,255,.4);background:rgba(201,167,255,.12)}
+.highlight{background:rgba(57,229,140,.10);border:1px solid rgba(57,229,140,.35);padding:18px;border-radius:16px;margin-top:18px}
+.warning{background:rgba(246,200,95,.12);border:1px solid rgba(246,200,95,.35);padding:18px;border-radius:16px;margin-top:18px}
+.danger{background:rgba(255,123,123,.10);border:1px solid rgba(255,123,123,.35);padding:18px;border-radius:16px;margin-top:18px}
+.flow{display:grid;gap:12px;max-width:920px}
+.step{background:var(--card2);border-left:5px solid var(--green);padding:18px 20px;border-radius:12px}
+.step small{color:var(--muted);display:block;margin-top:4px}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:16px;overflow:hidden;border:1px solid var(--line);margin-top:14px}
+th,td{padding:14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#22302c;color:var(--green)}
+tr:last-child td{border-bottom:none}
+ul{padding-left:20px}.sla{color:var(--yellow);font-weight:bold}.yes{color:var(--green);font-weight:bold}.no{color:var(--red);font-weight:bold}
+footer{padding:28px 8%;color:var(--muted);border-top:1px solid var(--line);background:#0b0f0e}
+</style>
+</head>
+<body>
+<header>
+<h1>Portal do Círculo de Soluções</h1>
+<p>Central de governança para solicitações, projetos, SLAs, papéis, responsabilidades, homologação, catálogo de serviços e regras operacionais do Círculo de Soluções.</p>
+</header>
+<nav>
+<a href="#objetivo">Objetivo</a><a href="#pipeline">Pipeline</a><a href="#processo">Processo</a><a href="#homologacao">Homologação</a><a href="#papeis">Papéis</a><a href="#sla">SLAs</a><a href="#servicos">Serviços</a><a href="#template">Template</a><a href="#regras">Regras</a><a href="#indicadores">Indicadores</a>
+</nav>
+<main>
+
+<section id="objetivo">
+<h2>Objetivo do Portal</h2>
+<div class="highlight">Centralizar as informações operacionais do Círculo de Soluções, garantindo visibilidade sobre demandas, prazos, responsabilidades, regras de homologação, contatos do cliente, fluxo de atendimento e histórico dos projetos.</div>
+<div class="grid" style="margin-top:18px">
+<div class="card"><strong>Visibilidade</strong><br>GSCs, Projetos, Soluções e Desenvolvimento acompanham o status das demandas.</div>
+<div class="card"><strong>Rastreabilidade</strong><br>Todo o histórico fica em um único card, da abertura à conclusão.</div>
+<div class="card"><strong>Governança</strong><br>Define papéis, prazos, regras de escopo, critérios de homologação e responsabilidades.</div>
+</div>
+</section>
+
+<section id="pipeline">
+<h2>Pipeline de Projetos CX</h2>
+<p>O pipeline representa o ciclo completo de uma solicitação.</p>
+<div class="flow">
+<div class="step"><strong>1. Solicitação Recebida</strong><br>Entrada registrada pela GSC no template padrão.<small>Responsável inicial: GSC</small></div>
+<div class="step"><strong>2. Em Análise de Viabilidade</strong><br>Projetos/Soluções avalia contexto, escopo, necessidade, impactos e necessidade de contato com cliente.<small>Responsável: Projetos/Soluções</small></div>
+<div class="step"><strong>3. Elaborando Orçamento</strong><br>Definição de escopo, premissas, prazo, esforço, valor e critérios de homologação.<small>Responsável: Projetos/Soluções</small></div>
+<div class="step"><strong>4. Orçamento Enviado</strong><br>Proposta enviada ao cliente e aguardando retorno.<small>Responsável pelo envio e follow-up: GSC</small></div>
+<div class="step"><strong>5. Orçamento Aprovado</strong><br>Cliente aprova e o mesmo card segue para priorização e execução.<small>Responsável por atualizar o board: Projetos/Soluções</small></div>
+<div class="step"><strong>6. Priorizado</strong><br>Demanda aprovada entra na fila conforme capacidade e criticidade.<small>Responsável: Projetos/Soluções</small></div>
+<div class="step"><strong>7. Projeto em Desenvolvimento</strong><br>Desenvolvimento, parametrização, configuração, integração ou entrega técnica.<small>Responsável: Desenvolvimento, com acompanhamento de Projetos/Soluções</small></div>
+<div class="step"><strong>8. Homologação</strong><br>Validação interna e validação do cliente conforme escopo aprovado.<small>Responsáveis: Projetos/Soluções, Cliente e GSC no acompanhamento</small></div>
+<div class="step"><strong>9. Concluído</strong><br>Projeto encerrado com aceite, evidências e documentação atualizada.<small>Responsável: Projetos/Soluções</small></div>
+</div>
+<div class="warning"><strong>Fluxos alternativos:</strong> Orçamento Reprovado, Cancelado ou Nova Análise quando houver mudança de escopo.</div>
+<div class="highlight"><strong>Regra principal:</strong> cada demanda deve ter apenas um card durante todo o ciclo de vida. O card não deve ser duplicado quando o orçamento for aprovado.</div>
+</section>
+
+<section id="processo">
+<h2>Processo Detalhado de Atendimento</h2>
+<table>
+<tr><th>Etapa</th><th>Descrição detalhada</th><th>Responsável</th><th>Critério para avançar</th></tr>
+<tr><td>Solicitação Recebida</td><td>A GSC registra necessidade, contexto, objetivo, prazo desejado, anexos e contatos do cliente para acionamento.</td><td>GSC</td><td>Template completo e contatos informados.</td></tr>
+<tr><td>Triagem Inicial</td><td>Projetos/Soluções avalia se a solicitação possui informações suficientes e identifica se será necessário contato com o cliente.</td><td>Projetos/Soluções</td><td>Demanda classificada ou devolvida para complemento.</td></tr>
+<tr><td>Contato com Cliente</td><td>Quando houver necessidade de entendimento, o time de Soluções aciona o cliente para aprofundar cenário e validar necessidade.</td><td>Projetos/Soluções</td><td>Necessidade entendida e registrada no card.</td></tr>
+<tr><td>Análise de Viabilidade</td><td>Avaliação funcional, técnica, operacional, impacto no produto, risco, dependências e esforço aproximado.</td><td>Projetos/Soluções + Desenvolvimento quando necessário</td><td>Viabilidade definida e escopo preliminar validado.</td></tr>
+<tr><td>Elaboração de Orçamento</td><td>Formalização do escopo, premissas, valor, prazo, itens fora do escopo, riscos e critérios de homologação.</td><td>Projetos/Soluções</td><td>Orçamento finalizado para envio.</td></tr>
+<tr><td>Orçamento Enviado</td><td>GSC envia a proposta ao cliente e realiza follow-up dentro do prazo de validade.</td><td>GSC</td><td>Aprovação, reprovação ou cancelamento por ausência de retorno.</td></tr>
+<tr><td>Priorização</td><td>Após aprovação, Projetos/Soluções define prioridade, responsável, previsão de início e cronograma.</td><td>Projetos/Soluções</td><td>Demanda posicionada na fila de execução.</td></tr>
+<tr><td>Desenvolvimento</td><td>Execução conforme escopo aprovado, com testes técnicos e sinalização de impedimentos.</td><td>Desenvolvimento</td><td>Entrega pronta para validação interna.</td></tr>
+<tr><td>Homologação</td><td>Validação interna e validação do cliente. Ajustes são permitidos apenas dentro do escopo aprovado.</td><td>Projetos/Soluções + Cliente</td><td>Aceite formal ou registro de ajustes dentro do escopo.</td></tr>
+<tr><td>Concluído</td><td>Encerramento com aceite, documentação, evidências e histórico atualizado.</td><td>Projetos/Soluções</td><td>Card encerrado e disponível para consulta.</td></tr>
+</table>
+</section>
+
+<section id="homologacao">
+<h2>Regras de Homologação</h2>
+<div class="highlight">A homologação valida se a entrega atende exatamente ao escopo aprovado no orçamento. Ela não deve ser usada para incluir novas funcionalidades, novas regras ou mudanças significativas.</div>
+<div class="grid" style="margin-top:18px">
+<div class="card"><span class="tag blue">1ª Homologação</span><h3>Homologação Interna</h3><p>Realizada por Projetos/Soluções antes do envio ao cliente.</p><ul><li>Validar escopo entregue.</li><li>Registrar evidências de teste.</li><li>Confirmar que a entrega está pronta.</li><li>Identificar ajustes antes da exposição ao cliente.</li></ul></div>
+<div class="card"><span class="tag purple">2ª Homologação</span><h3>Homologação com Cliente</h3><p>Realizada com o cliente após validação interna.</p><ul><li>Cliente valida funcionamento.</li><li>GSC acompanha comunicação.</li><li>Projetos/Soluções apoia dúvidas.</li><li>Aceite registrado no card.</li></ul></div>
+</div>
+
+<h3>O que o cliente pode solicitar durante a homologação?</h3>
+<table>
+<tr><th>Permitido</th><th>Exemplo</th><th>Tratativa</th></tr>
+<tr><td class="yes">Correção de comportamento</td><td>Funcionalidade não executou conforme escopo aprovado.</td><td>Ajuste no mesmo card.</td></tr>
+<tr><td class="yes">Correção de regra prevista</td><td>Regra aprovada não foi aplicada corretamente.</td><td>Ajuste no mesmo card.</td></tr>
+<tr><td class="yes">Ajuste simples de texto/layout</td><td>Pequeno ajuste visual ou textual previsto.</td><td>Ajuste no mesmo card.</td></tr>
+<tr><td class="yes">Parametrização prevista</td><td>Ajuste dentro das opções previstas no escopo.</td><td>Ajuste no mesmo card.</td></tr>
+</table>
+
+<h3>O que não pode ser tratado como ajuste de homologação?</h3>
+<table>
+<tr><th>Não permitido</th><th>Exemplo</th><th>Tratativa</th></tr>
+<tr><td class="no">Nova funcionalidade</td><td>Cliente solicita algo que não estava no escopo aprovado.</td><td>Nova análise e possível novo orçamento.</td></tr>
+<tr><td class="no">Nova integração</td><td>Cliente pede conexão com novo sistema ou novo fluxo.</td><td>Nova solicitação.</td></tr>
+<tr><td class="no">Novo relatório</td><td>Cliente solicita relatório adicional após a entrega.</td><td>Nova análise e orçamento.</td></tr>
+<tr><td class="no">Mudança significativa de regra</td><td>Cliente muda a regra de negócio após desenvolvimento.</td><td>Nova análise de impacto.</td></tr>
+<tr><td class="no">Alteração de escopo</td><td>Pedido altera prazo, esforço, arquitetura ou objetivo.</td><td>Nova proposta.</td></tr>
+</table>
+
+<div class="warning"><strong>Rodadas sugeridas:</strong> até 2 rodadas. Primeira validação do cliente e segunda validação dos ajustes dentro do escopo. Depois disso, novas solicitações devem ser avaliadas como nova demanda.</div>
+<div class="danger"><strong>Importante:</strong> solicitações fora do escopo aprovado não devem ser absorvidas automaticamente no projeto em andamento.</div>
+</section>
+
+<section id="papeis">
+<h2>Papéis e Responsabilidades</h2>
+<div class="grid">
+<div class="card"><span class="tag">GSC</span><h3>Entrada e relacionamento comercial</h3><ul><li>Abrir solicitação no board.</li><li>Preencher contexto, necessidade e objetivo.</li><li>Informar nome, e-mail, telefone e área dos contatos do cliente.</li><li>Anexar documentos, prints, atas e materiais.</li><li>Informar prazo desejado e urgência comercial.</li><li>Enviar orçamento ao cliente após elaboração por Soluções.</li><li>Acompanhar retorno comercial e homologação.</li></ul><p><strong>Importante:</strong> GSC não define escopo, orçamento ou conduz reunião técnica.</p></div>
+<div class="card"><span class="tag blue">Projetos/Soluções</span><h3>Gestão da demanda</h3><ul><li>Realizar triagem.</li><li>Acionar cliente para entendimento quando necessário.</li><li>Conduzir reunião de entendimento.</li><li>Avaliar viabilidade.</li><li>Acionar Desenvolvimento para parecer técnico.</li><li>Definir escopo, premissas, riscos e critérios de homologação.</li><li>Elaborar orçamento e prazo estimado.</li><li>Acompanhar execução, homologação e encerramento.</li></ul></div>
+<div class="card"><span class="tag yellow">Desenvolvimento</span><h3>Avaliação e execução técnica</h3><ul><li>Apoiar análise técnica.</li><li>Indicar impactos, riscos e dependências.</li><li>Contribuir com estimativa.</li><li>Executar desenvolvimento, ajustes ou configurações.</li><li>Realizar testes técnicos.</li><li>Sinalizar impedimentos.</li></ul></div>
+<div class="card"><span class="tag purple">Cliente</span><h3>Aprovação e validação</h3><ul><li>Participar da reunião de entendimento quando necessário.</li><li>Validar escopo e premissas.</li><li>Aprovar ou recusar orçamento.</li><li>Realizar homologação.</li><li>Formalizar aceite ou ajustes dentro do escopo.</li></ul></div>
+</div>
+
+<h3>Matriz resumida de responsabilidades</h3>
+<table>
+<tr><th>Atividade</th><th>GSC</th><th>Projetos/Soluções</th><th>Desenvolvimento</th><th>Cliente</th></tr>
+<tr><td>Abrir solicitação</td><td>Responsável</td><td>Apoia</td><td>-</td><td>-</td></tr>
+<tr><td>Informar contatos do cliente</td><td>Responsável</td><td>Consulta</td><td>-</td><td>-</td></tr>
+<tr><td>Conduzir reunião com cliente</td><td>Acompanha</td><td>Responsável</td><td>Opcional</td><td>Participa</td></tr>
+<tr><td>Analisar viabilidade</td><td>Apoia</td><td>Responsável</td><td>Apoia tecnicamente</td><td>Apoia com contexto</td></tr>
+<tr><td>Elaborar orçamento</td><td>-</td><td>Responsável</td><td>Apoia estimativa</td><td>-</td></tr>
+<tr><td>Enviar orçamento</td><td>Responsável</td><td>Apoia</td><td>-</td><td>Recebe</td></tr>
+<tr><td>Executar projeto</td><td>Acompanha</td><td>Gerencia</td><td>Responsável</td><td>-</td></tr>
+<tr><td>Homologar entrega</td><td>Acompanha</td><td>Responsável pelo processo</td><td>Apoia ajustes</td><td>Responsável pelo aceite</td></tr>
+<tr><td>Encerrar projeto</td><td>Informada</td><td>Responsável</td><td>-</td><td>Valida</td></tr>
+</table>
+</section>
+
+<section id="sla">
+<h2>SLA e Prazos Sugeridos</h2>
+<table>
+<tr><th>Etapa</th><th>Responsável</th><th>SLA sugerido</th><th>Observação</th></tr>
+<tr><td>Triagem inicial</td><td>Projetos/Soluções</td><td class="sla">Até 2 dias úteis</td><td>Verificar se o card está completo.</td></tr>
+<tr><td>Complemento de informações</td><td>GSC</td><td class="sla">Até 2 dias úteis</td><td>Quando faltarem dados ou contatos.</td></tr>
+<tr><td>Agendamento/contato com cliente</td><td>Projetos/Soluções</td><td class="sla">Até 3 dias úteis</td><td>Quando for necessário entendimento adicional.</td></tr>
+<tr><td>Análise de viabilidade</td><td>Projetos/Soluções</td><td class="sla">Até 5 dias úteis</td><td>Pode variar conforme complexidade.</td></tr>
+<tr><td>Parecer técnico</td><td>Desenvolvimento</td><td class="sla">Até 3 dias úteis</td><td>Quando houver dependência técnica.</td></tr>
+<tr><td>Elaboração de orçamento</td><td>Projetos/Soluções</td><td class="sla">Até 3 dias úteis</td><td>Após escopo entendido.</td></tr>
+<tr><td>Envio do orçamento</td><td>GSC</td><td class="sla">Até 1 dia útil</td><td>Após orçamento finalizado.</td></tr>
+<tr><td>Retorno do cliente</td><td>Cliente/GSC</td><td class="sla">Até 30 dias</td><td>Validade sugerida da proposta.</td></tr>
+<tr><td>Priorização após aprovação</td><td>Projetos/Soluções</td><td class="sla">Até 3 dias úteis</td><td>Definir responsável e previsão.</td></tr>
+<tr><td>Desenvolvimento</td><td>Desenvolvimento</td><td class="sla">Conforme cronograma</td><td>Conforme escopo aprovado.</td></tr>
+<tr><td>Homologação interna</td><td>Projetos/Soluções</td><td class="sla">Até 3 dias úteis</td><td>Antes do envio ao cliente.</td></tr>
+<tr><td>Homologação cliente</td><td>Cliente/GSC/Projetos</td><td class="sla">Até 5 dias úteis</td><td>Prazo sugerido para retorno.</td></tr>
+<tr><td>Ajustes de homologação</td><td>Desenvolvimento/Projetos</td><td class="sla">Conforme criticidade</td><td>Apenas dentro do escopo.</td></tr>
+<tr><td>Encerramento</td><td>Projetos/Soluções</td><td class="sla">Até 1 dia útil</td><td>Após aceite final.</td></tr>
+</table>
+</section>
+
+<section id="servicos">
+<h2>Catálogo de Serviços</h2>
+<div class="grid">
+<div class="card"><h3>APIs e Integrações</h3><p>Análise e implementação de integrações via API, SFTP, XML ou formatos suportados.</p></div>
+<div class="card"><h3>Parametrizações</h3><p>Ajustes de configuração no ambiente do cliente, regras de negócio, campos, fases e fluxos.</p></div>
+<div class="card"><h3>Relatórios e Dashboards</h3><p>Construção ou alteração de relatórios operacionais, gerenciais e indicadores.</p></div>
+<div class="card"><h3>Análise de Viabilidade</h3><p>Avaliação funcional e técnica para entender se a demanda pode ser atendida, estimada ou evoluída.</p></div>
+<div class="card"><h3>Melhorias de Produto</h3><p>Registro e avaliação de necessidades que podem gerar evolução de produto ou roadmap.</p></div>
+<div class="card"><h3>Apoio em Reuniões</h3><p>Participação de Soluções em reuniões técnicas, comerciais ou de alinhamento com clientes.</p></div>
+<div class="card"><h3>Customizações</h3><p>Demandas específicas de clientes que exigem regra, configuração ou entrega personalizada.</p></div>
+<div class="card"><h3>Homologação Assistida</h3><p>Apoio ao cliente e à GSC durante testes, validação e aceite.</p></div>
+</div>
+</section>
+
+<section id="template">
+<h2>Template de Solicitação</h2>
+<table>
+<tr><th>Campo</th><th>Descrição</th><th>Obrigatório?</th></tr>
+<tr><td>Cliente</td><td>Nome do cliente solicitante.</td><td>Sim</td></tr>
+<tr><td>ID Cliente</td><td>Identificador do cliente, quando disponível.</td><td>Sim</td></tr>
+<tr><td>Solicitante</td><td>GSC responsável pela abertura.</td><td>Sim</td></tr>
+<tr><td>Contatos do cliente</td><td>Nome, e-mail, telefone, cargo/área e melhor canal para contato.</td><td>Sim</td></tr>
+<tr><td>Tipo de Solicitação</td><td>API, relatório, parametrização, viabilidade, reunião, melhoria etc.</td><td>Sim</td></tr>
+<tr><td>Descrição da Necessidade</td><td>Contexto, problema, objetivo e resultado esperado.</td><td>Sim</td></tr>
+<tr><td>Prazo desejado</td><td>Data esperada pelo cliente, se houver.</td><td>Opcional</td></tr>
+<tr><td>Documentação</td><td>Links, prints, atas, arquivos e evidências.</td><td>Recomendado</td></tr>
+<tr><td>Observações comerciais</td><td>Contrato, criticidade, renovação ou expectativa do cliente.</td><td>Opcional</td></tr>
+</table>
+</section>
+
+<section id="regras">
+<h2>Regras de Negócio do Processo</h2>
+<div class="grid">
+<div class="card"><strong>Um único card</strong><br>O mesmo card acompanha toda a jornada.</div>
+<div class="card"><strong>Contato com cliente</strong><br>A GSC informa os contatos; Soluções conduz a reunião de entendimento.</div>
+<div class="card"><strong>Escopo aprovado</strong><br>O orçamento deve deixar claro entrega, não entrega, premissas e critérios de homologação.</div>
+<div class="card"><strong>Homologação limitada</strong><br>Ajustes são permitidos apenas dentro do escopo aprovado.</div>
+<div class="card"><strong>Mudança de escopo</strong><br>Pedidos fora do escopo geram nova análise e possível novo orçamento.</div>
+<div class="card"><strong>Orçamento</strong><br>Validade sugerida de 30 dias; após esse prazo, poderá ser necessária nova avaliação.</div>
+</div>
+</section>
+
+<section id="indicadores">
+<h2>Indicadores Sugeridos</h2>
+<div class="grid">
+<div class="card"><strong>Volume</strong><br>Demandas abertas, em análise, em desenvolvimento e concluídas.</div>
+<div class="card"><strong>Tempo</strong><br>Tempo médio em análise, orçamento, desenvolvimento e homologação.</div>
+<div class="card"><strong>Conversão</strong><br>Orçamentos enviados, aprovados, reprovados e cancelados.</div>
+<div class="card"><strong>Operação</strong><br>Projetos por responsável, cliente, tipo de demanda e status.</div>
+</div>
+</section>
+
+</main>
+<footer>Portal do Círculo de Soluções · Versão atualizada com regras de homologação, contato com cliente, responsabilidades e governança do processo.</footer>
+</body>
+</html>
